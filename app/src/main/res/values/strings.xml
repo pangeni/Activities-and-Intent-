@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Intent and Activities</string>
+    <string name="article1">Intent and Activities</string>
+    <string name="article2">Intent and Aes</string>
+    <string name="article3">Intent and Acities</string>
 </resources>
