@@ -12,15 +12,22 @@ import android.widget.TextView;
 
 
 public class MainActivity extends AppCompatActivity {
-    private EditText mMessageEditText;
-    public static final int TEXT_REQUEST = 1;
-    private TextView mReplyHeadTextView;
-    private TextView mReplyTextView;
 
+    // Unique tag for the intent reply
+    public static final int TEXT_REQUEST = 1;
+    // Class name for Log tag
     private static final String LOG_TAG =
             MainActivity.class.getSimpleName();
+    // Unique tag required for the intent extra
     public static final String EXTRA_MESSAGE =
             "com.example.android.twoactivities.extra.MESSAGE";
+
+    // EditText view for the message
+    private EditText mMessageEditText;
+    // TextView for the reply header
+    private TextView mReplyHeadTextView;
+    // TextView for the reply body
+    private TextView mReplyTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +38,14 @@ public class MainActivity extends AppCompatActivity {
         mReplyHeadTextView = findViewById(R.id.text_header_reply);
         mReplyTextView = findViewById(R.id.text_message_reply);
     }
-
+    /**
+     * Handles the onClick for the "Send" button. Gets the value of the main EditText,
+     * creates an intent, and launches the second activity with that intent.
+     *
+     * The return intent from the second activity is onActivityResult().
+     *
+     * @param view The view (Button) that was clicked.
+     */
     public void launchSecondActivity(View view) {
         Log.d(LOG_TAG, "Button clicked!");
         Intent intent = new Intent(this, SecondActivity.class);
@@ -42,13 +56,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+        // Test for the right intent reply.
         if (requestCode == TEXT_REQUEST) {
+            // Test to make sure the intent reply result was good.
             if (resultCode == RESULT_OK) {
-                String reply =
-                        data.getStringExtra(SecondActivity.EXTRA_REPLY);
+                String reply = data.getStringExtra(SecondActivity.EXTRA_REPLY);
+
+                // Make the reply head visible.
                 mReplyHeadTextView.setVisibility(View.VISIBLE);
+
+                // Set the reply and make it visible.
                 mReplyTextView.setText(reply);
                 mReplyTextView.setVisibility(View.VISIBLE);
             }
