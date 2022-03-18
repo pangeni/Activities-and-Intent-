@@ -9,7 +9,6 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-
     public static final String EXTRA_MESSAGE =
             "com.example.android.twoactivities.extra.MESSAGE";
 
@@ -22,17 +21,17 @@ public class MainActivity extends AppCompatActivity {
     }
     public void btn1(View view) {
         Intent intent = new Intent(this, SecondActivity.class);
-        intent.putExtra(EXTRA_MESSAGE, "text_one");
+        intent.putExtra(EXTRA_MESSAGE, "article1");
         startActivity(intent);
     }
     public void btn2(View view) {
         Intent intent = new Intent(this, SecondActivity.class);
-        intent.putExtra(EXTRA_MESSAGE, "text_two");
+        intent.putExtra(EXTRA_MESSAGE, "article2");
         startActivity(intent);
     }
     public void btn3(View view) {
         Intent intent = new Intent(this, SecondActivity.class);
-        intent.putExtra(EXTRA_MESSAGE, "text_three");
+        intent.putExtra(EXTRA_MESSAGE, "article3");
         startActivity(intent);
     }
 }

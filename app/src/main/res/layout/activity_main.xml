@@ -8,36 +8,38 @@
 
     <Button
         android:id="@+id/btn_one"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="133dp"
+        android:layout_height="242dp"
         android:onClick="btn1"
-        android:text="Button_One"
+        android:text="Button One"
         app:layout_constraintBottom_toTopOf="@+id/btn_Two"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread" />
 
     <Button
         android:id="@+id/btn_Two"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="242dp"
         android:onClick="btn2"
-        android:layout_marginBottom="148dp"
-        android:text="button_two"
+        android:text="BUTTON TWO"
         app:layout_constraintBottom_toTopOf="@+id/btn_three"
         app:layout_constraintEnd_toEndOf="@+id/btn_one"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/btn_one" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/btn_one"
+        app:layout_constraintTop_toBottomOf="@+id/btn_one" />
 
     <Button
         android:id="@+id/btn_three"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="133dp"
+        android:layout_height="243dp"
         android:onClick="btn3"
-        android:layout_marginBottom="268dp"
-        android:text="Button_Three"
+        android:text="Button Three"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/btn_Two"
-        app:layout_constraintHorizontal_bias="0.666"
-        app:layout_constraintStart_toStartOf="@+id/btn_Two" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/btn_Two"
+        app:layout_constraintTop_toBottomOf="@+id/btn_Two" />
 </androidx.constraintlayout.widget.ConstraintLayout>
