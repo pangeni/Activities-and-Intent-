@@ -9,8 +9,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static final String EXTRA_MESSAGE =
-            "com.example.android.twoactivities.extra.MESSAGE";
+    public static final String EXTRA_MESSAGE = "SanjayDon";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
