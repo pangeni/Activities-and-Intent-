@@ -32,13 +32,15 @@ public class MainActivity extends AppCompatActivity {
                 text.setText("" + count);
             }
         });
+        button2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+                intent.putExtra(EXTRA_MESSAGE,  ""+count);
+                startActivity(intent);
+            }
+        });
 
-    }
-
-    public void SayHello(View view) {
-        Intent intent = new Intent(this, SecondActivity.class);
-        intent.putExtra(EXTRA_MESSAGE, count);
-        startActivity(intent);
     }
 
 }
