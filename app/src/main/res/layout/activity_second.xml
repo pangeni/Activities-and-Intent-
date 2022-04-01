@@ -10,7 +10,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="10dp"
-        android:text="Button Activity"></TextView>
+        android:text="Button Activity"
+        android:textColor="@color/white"
+        android:background="@color/purple_200"></TextView>
 
 <ScrollView
     android:layout_width="match_parent"
