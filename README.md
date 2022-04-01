@@ -6,6 +6,8 @@
 - Implement button action on OnClick method in main Activities.
 - To check interface Action, create LOG_TAG inside LaunchSecondActivities().
 - At top of the mainActivity class, add constant for LOG_TAG variable.
+## First Activity Layout
+![alt text](First.png)
 
 ## Task 2 "Create and Launch SecondActivity"
 - To create new SecondActivity we have to add its own layout and Java files.
@@ -16,6 +18,8 @@
 - The intent constructor takes two arguments for an explicit intent, an application context and specific component that will receive that intent.
 - The startActivity() method call the new intent argument.
 - When you click the send button, MainActivity sends the intent and the Andriod system launches SecondActivity.
+## Second Activity Layout
+![alt text](SecondM.png)
 
 ## Task 3 "Send data from the MainActivity to the SecondActivity"
 - Add EditText  to the MainActivity Layout.
@@ -29,6 +33,8 @@
 - findViewById() to get reference to the TextView for the message.
 - Set the Text of TextView to the String from the Intent extra.
 - When you typed message in MainActivity and click Send it will send you to SecondActivity to display message.
+## Send Data from MainActivity
+![alt text](FirstM.png)
 
 ## Task 4 "Return Data back to MainActivity"
 - Add EditText and Button to Send messages from secondActivities.
@@ -48,3 +54,5 @@
 - In the launchSecondActivity() method, change the call to startActivity() to be startActivityForResult(), and include the TEXT_REQUEST key as an argument.
 - Inside onActivityResult(), call super.onActivityResult().
 - To test for TEXT_REQUEST make sure you process the right Intent result. Also test for RESULT_OK, to make sure that the request was successful.
+## Return Data Back To MainActivity
+![alt text](SecondReply.png)
