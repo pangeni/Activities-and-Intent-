@@ -1,7 +1,0 @@
-<resources>
-    <string name="app_name">Intent and Activities</string>
-    <string name="say_hello_toast">Say Hello Toast</string>
-    <string name="count_hello">Count Hello</string>
-    <string name="text_view">text_view</string>
-    <string name="text_Value">0</string>
-</resources>
